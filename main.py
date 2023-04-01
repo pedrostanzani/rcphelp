@@ -23,6 +23,10 @@ def convert_color_space(image: np.ndarray, _from: str, _to: str):
     return cv2.cvtColor(image, conversion_code)
 
 
+def read_RGB_image(filepath: str):
+    image = cv2.imread(filepath)
+    return cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+
 def transpose_image():
     pass
 
